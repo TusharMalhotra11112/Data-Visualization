@@ -39,7 +39,7 @@ export default function AddFilter({filter,setFilter, appliedFilter, setAppliedFi
     },[fire])
 
     const getlist = async()=>{
-        await axios.post("http://localhost:5000/getTopicList")
+        await axios.post("https://data-visualization-backend-zco6.onrender.com/getTopicList")
         .then((dt)=>{
             let temp={}
             const data = dt.data
@@ -56,7 +56,7 @@ export default function AddFilter({filter,setFilter, appliedFilter, setAppliedFi
         .catch(()=>{
             console.log("topics error")
         })
-        await axios.post("http://localhost:5000/getSectorList")
+        await axios.post("https://data-visualization-backend-zco6.onrender.com/getSectorList")
         .then((dt)=>{
             let temp={}
             const data = dt.data
@@ -73,7 +73,7 @@ export default function AddFilter({filter,setFilter, appliedFilter, setAppliedFi
         .catch(()=>{
             console.log("sector error")
         })
-        await axios.post("http://localhost:5000/getRegionList")
+        await axios.post("https://data-visualization-backend-zco6.onrender.com/getRegionList")
         .then((dt)=>{
             let temp={}
             const data = dt.data
@@ -90,7 +90,7 @@ export default function AddFilter({filter,setFilter, appliedFilter, setAppliedFi
         .catch(()=>{
             console.log("Region error")
         })
-        await axios.post("http://localhost:5000/getSourceList")
+        await axios.post("https://data-visualization-backend-zco6.onrender.com/getSourceList")
         .then((dt)=>{
             let temp={}
             const data = dt.data

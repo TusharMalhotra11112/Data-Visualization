@@ -16,7 +16,7 @@ export default function Component( appliedFilter,setAppliedFilter) {
   const [relevenceData,setRelevancedData] = useState(null)
 
   const reqLikelyhood = ()=>{
-    axios.post('http://localhost:5000/getLikelyhood',appliedFilter)
+    axios.post('https://data-visualization-backend-zco6.onrender.com/getLikelyhood',appliedFilter)
     .then((dt)=>{
       setLikelyhoodData(dt);
     })
@@ -26,7 +26,7 @@ export default function Component( appliedFilter,setAppliedFilter) {
   }
   
   const reqCountry = ()=>{
-    axios.post('http://localhost:5000/getCountry',appliedFilter)
+    axios.post('https://data-visualization-backend-zco6.onrender.com/getCountry',appliedFilter)
     .then((dt)=>{
       const data = dt.data
       let req = {}
@@ -46,7 +46,7 @@ export default function Component( appliedFilter,setAppliedFilter) {
   }
   
   const reqIntensity = ()=>{
-    axios.post('http://localhost:5000/getIntensity',appliedFilter)
+    axios.post('https://data-visualization-backend-zco6.onrender.com/getIntensity',appliedFilter)
     .then((dt)=>{
       setIntensityData(dt);
     })
@@ -56,7 +56,7 @@ export default function Component( appliedFilter,setAppliedFilter) {
   }
 
   const reqRegion =()=>{
-    axios.post('http://localhost:5000/getRegional',appliedFilter)
+    axios.post('https://data-visualization-backend-zco6.onrender.com/getRegional',appliedFilter)
     .then((dt)=>{
       const data = dt.data
       let req = {}
@@ -76,7 +76,7 @@ export default function Component( appliedFilter,setAppliedFilter) {
   }
 
   const reqTopic =()=>{
-    axios.post('http://localhost:5000/getTopic',appliedFilter)
+    axios.post('https://data-visualization-backend-zco6.onrender.com/getTopic',appliedFilter)
     .then((dt)=>{
       const data = dt.data
       let req = {}
@@ -97,7 +97,7 @@ export default function Component( appliedFilter,setAppliedFilter) {
   }
 
   const reqRelevence=()=>{
-      axios.post('http://localhost:5000/getRelevance',appliedFilter)
+      axios.post('https://data-visualization-backend-zco6.onrender.com/getRelevance',appliedFilter)
       .then((dt)=>{
         const data = dt.data
         let req = {}

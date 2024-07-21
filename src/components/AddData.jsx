@@ -34,7 +34,7 @@ export default function AddData({showAddData,setShowAddData}) {
         setFire((fire)=>!fire)
         setShowAddData(false)
         console.log(formData)
-        axios.post("http://localhost:5000/Upload",formData)
+        axios.post("https://data-visualization-backend-zco6.onrender.com/Upload",formData)
         .then(()=>{
             console.log("Upload done")
         })
